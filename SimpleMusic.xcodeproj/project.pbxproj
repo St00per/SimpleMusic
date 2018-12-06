@@ -15,6 +15,8 @@
 		0E7466B121B7DF53005CA89E /* MusicListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7466B021B7DF53005CA89E /* MusicListCollectionViewCell.swift */; };
 		0E756A4F21B8DC9C00337D5A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E756A4E21B8DC9C00337D5A /* Album.swift */; };
 		0E756A5121B923BE00337D5A /* [BB]guitarRiff.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E756A5021B923BE00337D5A /* [BB]guitarRiff.wav */; };
+		0E756A5321B92F5E00337D5A /* AlbumCover.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E756A5221B92F5E00337D5A /* AlbumCover.png */; };
+		0E756A5521B9337A00337D5A /* play (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0E756A5421B9337900337D5A /* play (1).png */; };
 		FC5079D69B7B110AA08DC0BC /* Pods_SimpleMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56897E7681C98D6B080DE9C /* Pods_SimpleMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		0E7466B021B7DF53005CA89E /* MusicListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E756A4E21B8DC9C00337D5A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		0E756A5021B923BE00337D5A /* [BB]guitarRiff.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "[BB]guitarRiff.wav"; sourceTree = "<group>"; };
+		0E756A5221B92F5E00337D5A /* AlbumCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlbumCover.png; sourceTree = "<group>"; };
+		0E756A5421B9337900337D5A /* play (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play (1).png"; sourceTree = "<group>"; };
 		2F6BA2ADF228783B597F0625 /* Pods-SimpleMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleMusic/Pods-SimpleMusic.release.xcconfig"; sourceTree = "<group>"; };
 		3D237AAEA8F80CE6EFE36C9C /* Pods-SimpleMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleMusic/Pods-SimpleMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		E56897E7681C98D6B080DE9C /* Pods_SimpleMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,13 +71,15 @@
 		0E74669921B7D100005CA89E /* SimpleMusic */ = {
 			isa = PBXGroup;
 			children = (
-				0E756A4E21B8DC9C00337D5A /* Album.swift */,
 				0E7466AC21B7D7AD005CA89E /* MusicListViewController.swift */,
 				0E7466B021B7DF53005CA89E /* MusicListCollectionViewCell.swift */,
 				0E74669A21B7D101005CA89E /* AppDelegate.swift */,
 				0E7466AE21B7D919005CA89E /* MusicList.storyboard */,
+				0E756A4E21B8DC9C00337D5A /* Album.swift */,
+				0E756A5221B92F5E00337D5A /* AlbumCover.png */,
 				0E756A5021B923BE00337D5A /* [BB]guitarRiff.wav */,
 				0E7466A121B7D101005CA89E /* Assets.xcassets */,
+				0E756A5421B9337900337D5A /* play (1).png */,
 				0E7466A321B7D101005CA89E /* LaunchScreen.storyboard */,
 				0E7466A621B7D101005CA89E /* Info.plist */,
 			);
@@ -157,10 +163,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E756A5321B92F5E00337D5A /* AlbumCover.png in Resources */,
 				0E7466AF21B7D919005CA89E /* MusicList.storyboard in Resources */,
 				0E756A5121B923BE00337D5A /* [BB]guitarRiff.wav in Resources */,
 				0E7466A521B7D101005CA89E /* LaunchScreen.storyboard in Resources */,
 				0E7466A221B7D101005CA89E /* Assets.xcassets in Resources */,
+				0E756A5521B9337A00337D5A /* play (1).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L59JFSX5QN;
 				INFOPLIST_FILE = SimpleMusic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,7 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L59JFSX5QN;
 				INFOPLIST_FILE = SimpleMusic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

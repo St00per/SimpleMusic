@@ -42,7 +42,7 @@ class MusicListViewController: UIViewController {
     @IBOutlet weak var segmentedContainer: UIView!
     var segmentControl: HMSegmentedControl?
     
-    
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,6 @@ class MusicListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
     segmentControl?.frame = segmentedContainer.bounds
-        //pickMedia()
     }
     
     private func createSegmentView() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class MusicListCollectionViewCell: UICollectionViewCell {
     
@@ -17,5 +18,29 @@ class MusicListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var playButton: UIButton!
     
     
+    @IBAction func play(_ sender: UIButton) {
+        audioPlayer.play()
+        //playButton.im
+    }
+    var audioPlayer: AVAudioPlayer!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setLabels()
+        
+        let path = Bundle.main.path(forResource: "[BB]guitarRiff", ofType: "wav")
+        let trackURL = URL(fileURLWithPath: path ?? "")
+        do {
+            try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+            audioPlayer = try? AVAudioPlayer(contentsOf: trackURL)
+            
+        }
+        
+    }
+    
+    func setLabels(){
+        albumCover.image = UIImage(named: "AlbumCover")
+        songName.text = "Californication"
+        artistName.text = "RHCP"
+    }
 }
