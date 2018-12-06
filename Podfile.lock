@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.8.0)
+  - BEMCheckBox (1.4.1)
+  - CodableAlamofire (1.1.0):
+    - Alamofire (~> 4.0)
+  - HMSegmentedControl (1.5.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - BEMCheckBox
+  - CodableAlamofire
+  - HMSegmentedControl
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BEMCheckBox
+    - CodableAlamofire
+    - HMSegmentedControl
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  CodableAlamofire: e2d2edcec7cf413f7862c30c8fa98eded27a83f9
+  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
+
+PODFILE CHECKSUM: edafcd28f6592905fd4b1ce8e078af316e7456a1
+
+COCOAPODS: 1.5.3
