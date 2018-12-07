@@ -44,6 +44,9 @@ class MusicListViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer!
     
+    var previousContentOffset: CGFloat = 0
+    var currentContentOffset: CGFloat = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -70,6 +73,7 @@ class MusicListViewController: UIViewController {
         segmentView.selectionIndicatorLocation = .down
         segmentView.selectionIndicatorHeight = 4
         segmentView.selectionStyle = .fullWidthStripe
+        segmentView.addTarget(self, action: #selector(segmentChanged(segment:)), for: UIControl.Event.valueChanged)
         
         segmentedContainer.addSubview(segmentView)
         
@@ -77,8 +81,27 @@ class MusicListViewController: UIViewController {
     }
     
     
+    
+    @objc func segmentChanged(segment: HMSegmentedControl) {
+        let visibleItems = collectionView.indexPathsForVisibleItems
+        let lastVisibleItem = collectionView.indexPathsForVisibleItems[collectionView.indexPathsForVisibleItems.count - 1]
+        if segment.selectedSegmentIndex == 0 {
+            collectionView.scrollToItem(at: [0,0], at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        }
+        if segment.selectedSegmentIndex == 1 {
+            collectionView.scrollToItem(at: [0,7], at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        }
+        if segment.selectedSegmentIndex == 2 {
+            collectionView.scrollToItem(at: [0,13], at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        }
+        if segment.selectedSegmentIndex == 3 {
+            collectionView.scrollToItem(at: [0,19], at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        }
+    }
+    
 }
 extension MusicListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 24
     }
@@ -88,5 +111,26 @@ extension MusicListViewController: UICollectionViewDelegate, UICollectionViewDat
             return UICollectionViewCell ()
         }
         return cell
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        previousContentOffset = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if (segmentControl?.selectedSegmentIndex ?? 0) <= 4, currentContentOffset != previousContentOffset {
+            currentContentOffset = scrollView.contentOffset.x
+        }
+        
+        if currentContentOffset-previousContentOffset == 414, (segmentControl?.selectedSegmentIndex ?? 0) < 4 {
+            segmentControl?.selectedSegmentIndex += 1
+        }
+        if currentContentOffset-previousContentOffset == -414, (segmentControl?.selectedSegmentIndex ?? 0) > 0 {
+            segmentControl?.selectedSegmentIndex -= 1
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print (scrollView.contentOffset)
     }
 }

@@ -19,15 +19,20 @@ class MusicListCollectionViewCell: UICollectionViewCell {
     
     
     @IBAction func play(_ sender: UIButton) {
+        if !audioPlayer.isPlaying {
         audioPlayer.play()
-        //playButton.im
+        playButton.setImage(UIImage(named: "Stop"), for: .normal)
+        } else {
+            audioPlayer.stop()
+            playButton.setImage(UIImage(named: "Play"), for: .normal)
+        }
     }
+    
     var audioPlayer: AVAudioPlayer!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setLabels()
-        
         let path = Bundle.main.path(forResource: "[BB]guitarRiff", ofType: "wav")
         let trackURL = URL(fileURLWithPath: path ?? "")
         do {
