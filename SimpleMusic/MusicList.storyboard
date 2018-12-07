@@ -133,21 +133,71 @@
                                     <outlet property="delegate" destination="WtK-L2-IdM" id="t5e-0h-zwW"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URH-dA-uJt" userLabel="Player View">
+                                <rect key="frame" x="0.0" y="616" width="414" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbumCover.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHr-MN-mha">
+                                        <rect key="frame" x="10" y="15" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Ulc-qK-6wi"/>
+                                            <constraint firstAttribute="width" constant="100" id="XHp-jo-BJK"/>
+                                            <constraint firstAttribute="height" constant="100" id="Ywt-Ma-iI4"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="l9G-PP-FcC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-XF-99y" userLabel="Song">
+                                        <rect key="frame" x="128" y="30" width="163" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukD-3K-d57" userLabel="Artist">
+                                        <rect key="frame" x="128" y="59" width="79" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-Bi-fuj">
+                                        <rect key="frame" x="290" y="30" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="pause.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZp-yK-hf5">
+                                        <rect key="frame" x="345" y="30" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="fast-forward.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0WK-zk-WSu"/>
+                                    <constraint firstAttribute="width" constant="414" id="QGQ-1l-nfH"/>
+                                    <constraint firstItem="HHr-MN-mha" firstAttribute="leading" secondItem="URH-dA-uJt" secondAttribute="leading" constant="10" id="jLH-pw-u8x"/>
+                                    <constraint firstAttribute="bottom" secondItem="HHr-MN-mha" secondAttribute="bottom" constant="5" id="qG0-ES-BSa"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="B47-ZO-T0R" firstAttribute="leading" secondItem="v2A-mS-xjt" secondAttribute="leading" id="2Wg-L2-VAX"/>
+                            <constraint firstItem="URH-dA-uJt" firstAttribute="leading" secondItem="v2A-mS-xjt" secondAttribute="leading" id="9MR-Vg-8eO"/>
                             <constraint firstItem="B47-ZO-T0R" firstAttribute="trailing" secondItem="v2A-mS-xjt" secondAttribute="trailing" id="9Ob-gG-57f"/>
                             <constraint firstItem="7o3-PQ-IOV" firstAttribute="leading" secondItem="v2A-mS-xjt" secondAttribute="leading" id="9dA-pj-Gk3"/>
                             <constraint firstItem="7o3-PQ-IOV" firstAttribute="trailing" secondItem="v2A-mS-xjt" secondAttribute="trailing" id="Dvl-VL-vhc"/>
                             <constraint firstItem="B47-ZO-T0R" firstAttribute="top" secondItem="7o3-PQ-IOV" secondAttribute="bottom" id="ZdH-Y9-xSy"/>
+                            <constraint firstItem="URH-dA-uJt" firstAttribute="trailing" secondItem="v2A-mS-xjt" secondAttribute="trailing" id="bTp-Ir-Alf"/>
                             <constraint firstItem="7o3-PQ-IOV" firstAttribute="top" secondItem="v2A-mS-xjt" secondAttribute="top" id="ecq-Ll-7Cv"/>
+                            <constraint firstItem="URH-dA-uJt" firstAttribute="bottom" secondItem="v2A-mS-xjt" secondAttribute="bottom" id="qSR-LY-JhV"/>
                             <constraint firstItem="B47-ZO-T0R" firstAttribute="top" secondItem="7o3-PQ-IOV" secondAttribute="bottom" id="yD9-66-kwM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v2A-mS-xjt"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ix4-I1-Z9P" id="tgT-af-Vpv"/>
+                        <outlet property="playerView" destination="URH-dA-uJt" id="nQL-NP-PcE"/>
                         <outlet property="segmentedContainer" destination="B47-ZO-T0R" id="iln-Xg-LaW"/>
                     </connections>
                 </viewController>
@@ -157,6 +207,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AlbumCover.png" width="600" height="601"/>
         <image name="Play.png" width="48" height="48"/>
+        <image name="fast-forward.png" width="48" height="48"/>
+        <image name="pause.png" width="48" height="48"/>
     </resources>
 </document>

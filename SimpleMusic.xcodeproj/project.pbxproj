@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E6AF93821B93DC20058F9FB /* Stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6AF93721B93DC20058F9FB /* Stop.png */; };
+		0E6AF93B21BA952B0058F9FB /* fast-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6AF93921BA952B0058F9FB /* fast-forward.png */; };
+		0E6AF93C21BA952B0058F9FB /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6AF93A21BA952B0058F9FB /* pause.png */; };
 		0E74669B21B7D101005CA89E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74669A21B7D101005CA89E /* AppDelegate.swift */; };
 		0E7466A221B7D101005CA89E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7466A121B7D101005CA89E /* Assets.xcassets */; };
 		0E7466A521B7D101005CA89E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7466A321B7D101005CA89E /* LaunchScreen.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		0E6AF93721B93DC20058F9FB /* Stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stop.png; sourceTree = "<group>"; };
+		0E6AF93921BA952B0058F9FB /* fast-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fast-forward.png"; sourceTree = "<group>"; };
+		0E6AF93A21BA952B0058F9FB /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		0E74669721B7D100005CA89E /* SimpleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E74669A21B7D101005CA89E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E7466A121B7D101005CA89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				0E7466B021B7DF53005CA89E /* MusicListCollectionViewCell.swift */,
 				0E74669A21B7D101005CA89E /* AppDelegate.swift */,
 				0E7466AE21B7D919005CA89E /* MusicList.storyboard */,
+				0E6AF93921BA952B0058F9FB /* fast-forward.png */,
+				0E6AF93A21BA952B0058F9FB /* pause.png */,
 				0E6AF93721B93DC20058F9FB /* Stop.png */,
 				0E756A4E21B8DC9C00337D5A /* Album.swift */,
 				0E756A5221B92F5E00337D5A /* AlbumCover.png */,
@@ -169,7 +175,9 @@
 				0E756A5321B92F5E00337D5A /* AlbumCover.png in Resources */,
 				0E7466AF21B7D919005CA89E /* MusicList.storyboard in Resources */,
 				0E756A5121B923BE00337D5A /* [BB]guitarRiff.wav in Resources */,
+				0E6AF93B21BA952B0058F9FB /* fast-forward.png in Resources */,
 				0E6AF93821B93DC20058F9FB /* Stop.png in Resources */,
+				0E6AF93C21BA952B0058F9FB /* pause.png in Resources */,
 				0E7466A521B7D101005CA89E /* LaunchScreen.storyboard in Resources */,
 				0E7466A221B7D101005CA89E /* Assets.xcassets in Resources */,
 				0E756A5521B9337A00337D5A /* Play.png in Resources */,

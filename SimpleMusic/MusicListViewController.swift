@@ -42,13 +42,16 @@ class MusicListViewController: UIViewController {
     @IBOutlet weak var segmentedContainer: UIView!
     var segmentControl: HMSegmentedControl?
     
+    
+    @IBOutlet weak var playerView: UIView!
     var audioPlayer: AVAudioPlayer!
     
     var previousContentOffset: CGFloat = 0
-    var currentContentOffset: CGFloat = 1
+    var currentContentOffset: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,6 +113,7 @@ extension MusicListViewController: UICollectionViewDelegate, UICollectionViewDat
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicListCollectionViewCell", for: indexPath) as? MusicListCollectionViewCell else {
             return UICollectionViewCell ()
         }
+        cell.viewController = self
         return cell
     }
     
@@ -118,7 +122,7 @@ extension MusicListViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if (segmentControl?.selectedSegmentIndex ?? 0) <= 4, currentContentOffset != previousContentOffset {
+        if (segmentControl?.selectedSegmentIndex ?? 0) <= 4 {
             currentContentOffset = scrollView.contentOffset.x
         }
         

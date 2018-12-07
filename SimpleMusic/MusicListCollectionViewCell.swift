@@ -20,6 +20,7 @@ class MusicListCollectionViewCell: UICollectionViewCell {
     
     @IBAction func play(_ sender: UIButton) {
         if !audioPlayer.isPlaying {
+        viewController.playerView.isHidden = false
         audioPlayer.play()
         playButton.setImage(UIImage(named: "Stop"), for: .normal)
         } else {
@@ -29,6 +30,7 @@ class MusicListCollectionViewCell: UICollectionViewCell {
     }
     
     var audioPlayer: AVAudioPlayer!
+    var viewController: UIViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
