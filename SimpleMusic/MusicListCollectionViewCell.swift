@@ -17,20 +17,20 @@ class MusicListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var playButton: UIButton!
     
-    
     @IBAction func play(_ sender: UIButton) {
         if !audioPlayer.isPlaying {
         viewController.playerView.isHidden = false
         audioPlayer.play()
-        playButton.setImage(UIImage(named: "Stop"), for: .normal)
+        playButton.setImage(UIImage(named: "pause"), for: .normal)
         } else {
             audioPlayer.stop()
+            viewController.playerView.isHidden = true
             playButton.setImage(UIImage(named: "Play"), for: .normal)
         }
     }
     
     var audioPlayer: AVAudioPlayer!
-    var viewController: UIViewController?
+    var viewController: MusicListViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +40,6 @@ class MusicListCollectionViewCell: UICollectionViewCell {
         do {
             try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
             audioPlayer = try? AVAudioPlayer(contentsOf: trackURL)
-            
         }
         
     }

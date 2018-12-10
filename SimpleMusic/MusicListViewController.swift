@@ -134,7 +134,7 @@ extension MusicListViewController: UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print (scrollView.contentOffset)
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print (scrollView.contentOffset)
+//    }
 }
